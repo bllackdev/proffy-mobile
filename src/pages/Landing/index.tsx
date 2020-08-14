@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, Image, Text, TouchableOpacity } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
 import styles from './styles';
 
@@ -9,6 +10,8 @@ import giveClassesIcon from '../../assets/img/icons/give-classes.png';
 import heartIcon from '../../assets/img/icons/heart.png';
 
 function Landing() {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
       <Image source={landingImg} style={styles.banner} />
