@@ -1,3 +1,4 @@
+import React from 'react';
 import { View, ImageBackground, Text } from 'react-native';
 
 import giveClassesBgImage from '../../assets/img/give-classes-background.png'
