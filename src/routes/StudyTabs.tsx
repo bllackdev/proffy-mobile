@@ -1,7 +1,7 @@
 import React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import TeacherList from '../pages/TeacherList/indes';
-import Favorires from '../pages/Favorites';
+import Favorites from '../pages/Favorites';
 import { Ionicons } from '@expo/vector-icons';
 
 const { Navigator, Screen } = createBottomTabNavigator();
@@ -13,21 +13,23 @@ function StudyTabs() {
         style: {
           elevation: 0,
           shadowOpacity: 0,
-          height: 64,
+          height: 60,
         },
         tabStyle: {
           flexDirection: 'row',
           alignItems: 'center',
           height: 64,
+          padding: 30,
+          justifyContent: 'space-between'
         },
         iconStyle: {
           flex: 0,
-          width: 20,
+          width: 30,
           height: 20,
         },
         labelStyle: {
           fontFamily: 'IndieFlower_400Regular',
-          fontSize: 13,
+          fontSize: 15,
           marginLeft: 16,
         },
         inactiveBackgroundColor: '#fafafc',
@@ -50,7 +52,7 @@ function StudyTabs() {
       />
       <Screen
         name="Favorites"
-        component={Favorires}
+        component={Favorites}
         options={{
           tabBarLabel: 'Favoritos',
           tabBarIcon: ({ color, size, focused }) => {
