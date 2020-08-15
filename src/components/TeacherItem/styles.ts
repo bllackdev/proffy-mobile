@@ -13,7 +13,7 @@ const styles = StyleSheet.create({
   profile: {
     flexDirection: 'row',
     alignItems: 'center',
-    padding: 24,
+    padding: 18,
   },
 
   avatar: {
@@ -37,8 +37,8 @@ const styles = StyleSheet.create({
   subject: {
     fontFamily: 'IndieFlower_400Regular',
     color: '#6a6180',
-    fontSize: 12,
-    marginTop: 4,
+    fontSize: 18,
+    marginTop: 2,
   },
 
   bio: {
@@ -50,31 +50,55 @@ const styles = StyleSheet.create({
   },
 
   footer: {
-
+    backgroundColor: '#fafafc',
+    padding: 24,
+    alignItems: 'center',
+    marginTop: 10,
   },
 
   price: {
-
+    fontFamily: '',
+    color: '#6a6180',
+    fontSize: 14,
   },
 
   priceValue: {
-
+    fontFamily: '',
+    color: '#8257e5',
+    fontSize: 16,
   },
 
   buttonsContainer: {
-
+    flexDirection: 'row',
+    marginTop: 16,
   },
 
   favoriteButton: {
-
+    backgroundColor: '#8257e5',
+    width: 56,
+    height: 56,
+    borderRadius: 8,
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginRight: 8,
   },
 
   contactButton: {
-
+    backgroundColor: '#04d361',
+    flex: 1,
+    height: 56,
+    borderRadius: 8,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    marginRight: 8,
   },
 
   contactButtonText: {
-
+    color: '#FFF',
+    fontFamily: 'IndieFlower_400Regular',
+    fontSize: 16,
+    marginLeft: 16
   },
 
 });
