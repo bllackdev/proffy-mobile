@@ -1,5 +1,5 @@
 import React from 'react';
-import { View } from "react-native";
+import { View, ScrollView } from "react-native";
 import PageHeader from '../../components/PageHeader';
 
 import styles from './styles';
@@ -10,7 +10,23 @@ function TeacherList() {
     <View style={styles.container}>
       <PageHeader title="Proffy disponíveis" />
 
-      <TeacherItem />
+      <ScrollView
+        style={styles.teacherList}
+        contentContainerStyle={{
+          paddingHorizontal: 16,
+          paddingBottom: -20,
+        }}
+      >
+        <TeacherItem />
+        <TeacherItem />
+        <TeacherItem />
+        <TeacherItem />
+        <TeacherItem />
+        <TeacherItem />
+        <TeacherItem />
+        <TeacherItem />
+      </ScrollView>
+
     </View>
 
   );
