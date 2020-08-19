@@ -4,20 +4,24 @@ import PageHeader from '../../components/PageHeader';
 
 import styles from './styles';
 import TeacherItem from '../../components/TeacherItem';
-import { BorderlessButton } from 'react-native-gesture-handler';
+import { BorderlessButton, RectButton } from 'react-native-gesture-handler';
 
 import { Feather } from '@expo/vector-icons';
 
 function TeacherList() {
   const [isFiltersVisible, setIsFiltersVisible] = useState(false);
 
+  function handleToggleFiltersVisible() {
+    setIsFiltersVisible(!isFiltersVisible);
+  }
+
   return (
     <View style={styles.container}>
       <PageHeader
         title="Proffy disponíveis"
         headerRight={(
-          <BorderlessButton>
-            <Feather name="filter" sie={20} color="#FFF" />
+          <BorderlessButton onPress={handleToggleFiltersVisible}>
+            <Feather name="filter" size={25} color="#FFF" />
           </BorderlessButton>
         )}
       >
@@ -48,8 +52,12 @@ function TeacherList() {
                   placeholderTextColor="#c1bccc"
                 />
               </View>
-            </View>
 
+
+            </View>
+            <RectButton style={styles.submitButton}>
+              <Text style={styles.submitButtonText}>Filtrar</Text>
+            </RectButton>
           </View>
         )}
       </PageHeader>
